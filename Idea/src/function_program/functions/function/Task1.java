@@ -3,6 +3,7 @@ package function_program.functions.function;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -39,6 +40,12 @@ public class Task1 {
                 .count();
 
         System.out.println(count1);
+      Consumer<String> stringConsumer = Task1::test;
+      stringConsumer.accept("Fdfdf");
 
+    }
+
+    public static <A> void test(A ob){
+        System.out.println(ob);
     }
 }
